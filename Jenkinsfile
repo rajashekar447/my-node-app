@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy using Ansible') {
             steps {
                 sh '''
-                cd /home/ubuntu/ansible
+                cd /var/lib/jenkins/ansible
                 ansible-playbook -i hosts deploy.yml
                 '''
             }
