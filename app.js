@@ -1,10 +1,16 @@
 const express = require("express");
+
 const app = express();
+
+// Disable Express version disclosure
+app.disable("x-powered-by");
 
 app.get("/", (req, res) => {
     res.send("Hello Jenkins Pipeline!");
 });
 
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
