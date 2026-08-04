@@ -6,7 +6,7 @@ const app = express();
 app.disable("x-powered-by");
 
 app.get("/", (req, res) => {
-    res.send("Hello Jenkins Pipeline!");
+    res.send("Hello Jenkins-nexus Pipeline!");
 });
 
 const PORT = process.env.PORT || 3000;
